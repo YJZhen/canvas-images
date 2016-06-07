@@ -1,1 +1,1 @@
-# canvas-images
+# 将HTML5中canvas标签的绘图以图片方式保存到本地
