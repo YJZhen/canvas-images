@@ -13,3 +13,12 @@ canvas{
     height: 500px;
     margin: auto;
 }
+.screen-ope{
+    text-align: center;
+    padding:20px 0px;
+}
+.screen-ope a{
+    color:#ff0000;
+    font-size:25px;
+}
+
