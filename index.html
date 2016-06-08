@@ -10,12 +10,26 @@
         <h3 class="canvas-title">绘画板</h3>
         <div class="canvas-box">
             <canvas id="canvas-1" width="500px" height="500px"></canvas>
+            <div class="control-panel">
+                <p><input type="checkbox" />实时截图</p>
+                <p>画笔颜色：<input type="color" /></p>
+                <p>
+                    画笔大小：
+                    <input type="range" value="1" min="1" max="10" />
+                    <span> 1</span>
+                </p>
+                <p>
+                    
+                </p>
+            </div>
         </div>
     </div>
     <div class="section screen-ope">
         <a href="javascript:" id="scr-ope">截图</a>
     </div>
-    <div></div>
-    <script src="libs/main.js"></script>
+    <div class="section section-img">
+        <img id="screen-img" src="" />
+    </div>
+    <script data-main="libs/main" src="libs/require.js"></script>
 </body>
 </html>
