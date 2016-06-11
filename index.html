@@ -11,25 +11,27 @@
         <div class="canvas-box">
             <canvas id="canvas-1" width="500px" height="500px"></canvas>
             <div class="control-panel">
-                <p><input type="checkbox" />实时截图</p>
-                <p>画笔颜色：<input type="color" /></p>
+                <p><input id="sync-img" type="checkbox" />实时截图</p>
+                <p>画笔颜色：<input id="color" type="color" /></p>
                 <p>
                     画笔大小：
-                    <input type="range" value="1" min="1" max="10" />
-                    <span> 1</span>
+                    <input type="range" id="pan-size" value="1" min="1" max="10" />
+                    <span id="pan-size-txt"> 1</span>
                 </p>
                 <p>
-                    
+                    图片URL：
+                    <input id="img-url" type="text" value="http://h.hiphotos.baidu.com/image/h%3D200/sign=2cfc5cb38b1001e9513c130f880f7b06/a9d3fd1f4134970abf7e057593cad1c8a7865d5e.jpg" placeholder="http://" />
+                    <button id="load-img">加载图片</button>
                 </p>
             </div>
         </div>
     </div>
     <div class="section screen-ope">
-        <a href="javascript:" id="scr-ope">截图</a>
+        <button id="scr-ope">截图</button>
     </div>
     <div class="section section-img">
         <img id="screen-img" src="" />
     </div>
-    <script data-main="libs/main" src="libs/require.js"></script>
+    <script data-main="js/main" src="js/libs/require.js"></script>
 </body>
 </html>

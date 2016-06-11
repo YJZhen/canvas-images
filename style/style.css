@@ -5,6 +5,7 @@ html,body,p{
 canvas{
     border-right: 1px solid #000000;
     cursor: cell;
+    color:#FFEB89;
 }
 .canvas-title{
     text-align: center;
@@ -21,6 +22,9 @@ canvas{
     width: 260px;
     top:20px;
     right: 20px;
+}
+.canvas-box .control-panel p{
+    padding-bottom: 10px;
 }
 .screen-ope{
     text-align: center;
