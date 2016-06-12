@@ -11,10 +11,6 @@ define(['base'],function(Base) {
             var _size =Base.$('#pan-size').value;
             Base.$('#pan-size-txt').innerText=' '+_size;
             return _size;
-        },
-        getImgURL:function(){
-            var _url=Base.$('#img-url').value;
-            return _url;
         }
     };
     

@@ -24,7 +24,9 @@ define(['base','control-panel'],function(Base,controlPanel) {
 
     function getScreenImage(_can){
         if(_can){
+            //canvas.toDataURL('image/png');
             screenImg.src=canvas.toDataURL('image/png');
+            //screenImg.src=canvas.getImageData();
         }
     }
     (function(){
@@ -55,13 +57,9 @@ define(['base','control-panel'],function(Base,controlPanel) {
 
     bindEvent(Base.$('#load-img'),'click',function(){
         var _img=new Image();
-        _img.src=controlPanel.getImgURL();
+        _img.src="style/123.jpg";
         _img.onload=function(){
-            canvasCtx.drawImage(_img,0,0);
-            canvasCtx.save();
-            canvasCtx.restore();
-
-
+            canvasCtx.drawImage(_img,0,0);;
         }
     });
     bindEvent(scrOpe,'click',function(){
