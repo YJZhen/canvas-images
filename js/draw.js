@@ -25,11 +25,10 @@ define(['base','control-panel'],function(Base,controlPanel) {
         });
         //监听鼠标在canvas标签的移动事件
         Base.bindEvent(canvas,'mousemove',function(ele,_event){
-            if(!_drawStatus)return;//如果
+            if(!_drawStatus)return;//如果不可绘画，则返回
             var _x=_event.screenX;
             var _y=_event.screenY;
             canvasCtx.lineTo(_event.offsetX,_event.offsetY);
-            canvasCtx.stroke();
             getScreenImage(controlPanel.syncToImg());
         });
         //监听鼠标在canvas标签的松开事件
