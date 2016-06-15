@@ -2,6 +2,7 @@ define(['base','control-panel'],function(Base,controlPanel) {
     var canvas=Base.$('#canvas-1');
     var canvasCtx=canvas.getContext('2d');
     var scrOpe=Base.$('#scr-ope');
+    var downImg=Base.$('#download-img');
     var screenImg=Base.$('#screen-img');
     var canvasW=canvas.offsetWidth;
     var canvasH=canvas.offsetHeight;
@@ -18,6 +19,7 @@ define(['base','control-panel'],function(Base,controlPanel) {
         //监听鼠标在canvas标签按下事件
         Base.bindEvent(canvas,'mousedown',function(ele,_event){
             _drawStatus=true;//当鼠标按下时，设未可以绘画
+            console.log(_event.offsetX);
             canvasCtx.lineWidth=controlPanel.getPanSize();//设置画笔的Size
             canvasCtx.strokeStyle=controlPanel.color();//设置画笔的颜色
             canvasCtx.beginPath();//开启一条新的路径
@@ -29,6 +31,7 @@ define(['base','control-panel'],function(Base,controlPanel) {
             var _x=_event.screenX;
             var _y=_event.screenY;
             canvasCtx.lineTo(_event.offsetX,_event.offsetY);
+            canvasCtx.stroke();//画线
             getScreenImage(controlPanel.syncToImg());
         });
         //监听鼠标在canvas标签的松开事件
@@ -48,6 +51,12 @@ define(['base','control-panel'],function(Base,controlPanel) {
     //监听“生成图片”按钮的点击事件
     Base.bindEvent(scrOpe,'click',function(){
         getScreenImage(true);
+    });
+    //监听“生成图片”按钮的点击事件
+    Base.bindEvent(downImg,'click',function(ele,eve){
+        ele.href = canvas.toDataURL();
+        ele.target = "_blank";
+        ele.download ="canvas-img.png";
     });
     return null;    
 });
