@@ -52,7 +52,7 @@ define(['base','control-panel'],function(Base,controlPanel) {
     Base.bindEvent(scrOpe,'click',function(){
         getScreenImage(true);
     });
-    //监听“生成图片”按钮的点击事件
+    //监听“下载图片”按钮的点击事件
     Base.bindEvent(downImg,'click',function(ele,eve){
         ele.href = canvas.toDataURL();
         ele.target = "_blank";
